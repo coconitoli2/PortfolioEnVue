@@ -1,0 +1,110 @@
+header {
+    position: relative;
+    /* ici repère pour l’icône-absolue */
+    height: 110px;
+    width: 100%;
+    background-image: url("../image/fond-sac-plastique-froisse-rouge.jpg");
+    background-size: cover;
+    /* Couvrire toute ma page web*/
+    background-repeat: no-repeat;
+    /*Pour que je n'ai pas l'image qui réapparaise ailleur sur le site*/
+    background-position: center;
+}
+
+.Icon_Header {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+    z-index: 2000;
+}
+
+.Icon_Header:hover {
+    /*Permet de rendre plus brillent et ça fait un tournement de sense*/
+    transform: translateX(-50%) scale(1.2) rotate(10deg);
+    filter: brightness(1.2);
+}
+
+.GithubLogo {
+    width: 70px;
+    height: 50px;
+}
+
+.LienSociaux {
+    color: aqua;
+    text-decoration: none;
+}
+
+.DiscordIcon {
+    width: 70px;
+    height: 50px;
+}
+
+footer {
+    margin: 0;
+    height: 120px;
+    width: 100%;
+    background-image: url("../image/Des_cailloux.jfif");
+    background-size: cover;
+    /* Couvrire toute ma page web*/
+    background-repeat: no-repeat;
+    /*Pour que je n'ai pas l'image qui réapparaise ailleur sur le site*/
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer .Une_mise_à_Jour {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: white;
+    margin: 0;
+}
+
+footer .Une_mise_à_Jour {
+    color: rgb(255, 0, 0);
+    margin: 50px;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.LienSociaux img {
+    transition: transform 0.2s;
+}
+
+.LienSociaux:hover img {
+    animation: shake 0.5s;
+    /* durée totale de l’effet */
+    transform-origin: center;
+    /* pivot au centre de l’icône */
+}
