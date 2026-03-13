@@ -1,14 +1,5 @@
 <template>
-    <header>
-        <nav class="NavBar">
-       
-        <a :href="`/`">
-          <img class="IconPortfolio" src="../assets/icon/pixil-frame-0.png" alt="IconPortfolio">
-        </a>
-         <h1 class="ParagrapheNav" >Mon Portfolio</h1>
-         <img class="IconGestion" src="../assets/icon/pixil-frame-1.png" alt="IconGestion">
-    </nav>
-    </header>
+    <Header></Header>
     <main class="Main">
         <div class="BoxDiv">
             <h1>Devoir 3 : Dynamiser un Espace Commentaire</h1>
@@ -26,40 +17,16 @@
             
         </div>
     </main>
-      <footer>
-        <div class="LienSocial">
-            <a href="https://github.com/coconitoli2">
-                <img class="GithubIcon" src="../assets/icon/GitHub-Logo-700x394.png" alt="GithubIcon">
-            </a>
-            <a href="https://discord.com/channels/@me/1378419902372646924">
-                <img class="DiscordIcon" src="../assets/icon/discord-logo-0.png" alt="DiscordIcon">
-            </a>
-        </div>
-
-    </footer>
+    <Footer></Footer>
 
 </template>
 
-<script setup></script>
+<script setup>
+import Footer from '@/components/Footer.vue';
+import Header from '@/components/Header.vue';
+</script>
+
 <style scoped>
-
-.IconPortfolio:hover {
-        /*Celà crée un effet de zoom sur l'icon*/
-    transform: translateX(0%) scale(1.2) rotate(0deg);
-    filter: brightness(1.2);
-    }
-
-    .NavBar{
-    display: flex;
-    background-image: url("../assets/image/fond-sac-plastique-froisse-rouge.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;   
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
 
 .Main{
      background-image: url("../assets/image/Grille_Sur_Font_Gris.jfif");
@@ -86,27 +53,6 @@
 .imageDevoir{
     width: 1000px;
  height: 1000px;
-}
-
-.LienSocial img {
-  width: 40px;
-  height: auto;      /* garde les proportions */
-  margin-right: 10px;
-}
-
-.GithubIcon{
-    
-    width: 50px;
-    height: 10px;
-
-}
-.DiscordIcon{
-    width: 50px;
-    height: 10px;
-}
-
-footer{
-    background-image: url("../assets/image/Des_cailloux.jfif");
 }
 
 </style>
